@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default ({ currentPath }) => (
+const Navbar = ({ currentPath }) => (
   <nav className='navbar'>
     <ul className='nav-links'>
       <li className='nav-link'><NavLink disabled={currentPath === '/'} to='/'>Home</NavLink></li>
@@ -10,3 +10,5 @@ export default ({ currentPath }) => (
     </ul>
   </nav>
 );
+
+export default Navbar;

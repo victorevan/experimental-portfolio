@@ -16,6 +16,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && firebase deploy",
+    "firebase-init": "firebase login && firebase init"
+  },
+  "devDependencies": {
+    "firebase-tools": "^4.2.1"
   }
 }
