@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.navbar {
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background-color: rgba(0,0,0,0.30);
+  display: flex;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-link {
+  color: white;
+  font-size: 20px;
+  list-style: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.nav-link a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.full {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.home,
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home {
+  background-color: #3193a5;
+}
+
+.projects {
+  background-color: #dd603a
+}
+
+.contact {
+  display: flex;
+}
+
+.contact .left,
+.contact .right {
+  z-index: 5000;
+  flex: 1;
+}
+
+.left {
+  background-color: #5b31bd
+}
+
+.right {
+  background-color: #b4c51d
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 5s ease;
+}
+
+.fade-enter-done {
+  opacity: 1;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0;
+  transition: opacity 5s ease;
+}
+
+/* home to projects */
+
+.home-to-projects-enter {
+  transform: translateY(100vh) translateZ(0);
+}
+
+.home-to-projects-enter-active {
+	transform: translateY(0) translateZ(0);
+	transition: transform 5s ease;
+}
+
+.home-to-projects-exit {
+  transform: translateY(0) translateZ(0);
+}
+
+.home-to-projects-exit-active {
+  transform: translateY(-100vh) translateZ(0);
+  transition: transform 5s ease;
+}
+
+/* projects to home */
+
+.projects-to-home-enter {
+  transform: translateY(-100vh) translateZ(0);
+}
+
+.projects-to-home-enter-active {
+  transform: translateY(0) translateZ(0);
+  transition: transform 5s ease;
+}
+
+.projects-to-home-exit {
+  transform: translateY(0) translateZ(0);
+}
+
+.projects-to-home-exit-active {
+  transform: translateY(100vh) translateZ(0);
+  transition: transform 5s ease;
+}
+
+/* contact transitions */
+
+.move-in-halves .left {
+  transform: translateY(-120%) translateZ(0);
+}
+
+.move-in-halves .right {
+  transform: translateY(120%) translateZ(0);
+}
+
+.move-in-halves-active .left,
+.move-in-halves-active .right {
+  transform: translateY(0) translateZ(0) !important;
+  transition: transform 5s ease;
+}
+
+.move-out-halves .left,
+.move-out-halves .right {
+  transform: translateY(0) translateZ(0);
+}
+
+.move-out-halves-active .left {
+  transform: translateY(-120%) translateZ(0);
+  transition: transform 5s ease;
+}
+
+.move-out-halves-active .right {
+  transform: translateY(120%) translateZ(0);
+  transition: transform 5s ease;
+}
